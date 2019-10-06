@@ -12,13 +12,24 @@
 using namespace std;
 using namespace testing;
 
-TEST(BST_ITERATOR_TEST, TEST_ITERATOR_INCREMENT) {
+TEST(BST_ITERATOR_TEST, TEST_ITERATOR_POST_INCREMENT) {
     BSTNode<int> node(3);
     BSTIterator<int> iter(&node);
 
     ASSERT_NE(iter, nullptr);
 
     iter++;
+
+    ASSERT_EQ(iter, nullptr);
+}
+
+TEST(BST_ITERATOR_TEST, TEST_ITERATOR_PRE_INCREMENT) {
+    BSTNode<int> node(3);
+    BSTIterator<int> iter(&node);
+
+    ASSERT_NE(iter, nullptr);
+
+    ++iter;
 
     ASSERT_EQ(iter, nullptr);
 }
