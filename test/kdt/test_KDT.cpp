@@ -40,6 +40,11 @@ TEST_F(SmallKDTFixture, TEST_SIZE) {
     ASSERT_EQ(kdt.size(), 5);
 }
 
+TEST_F(SmallKDTFixture, TEST_HEIGHT) {
+    // Assert that the kd tree has the correct size
+    ASSERT_EQ(kdt.height(), 2);
+}
+
 TEST_F(SmallKDTFixture, TEST_NEAREST_POINT) {
     NaiveSearch naiveSearch;
     naiveSearch.build(vec);
